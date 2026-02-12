@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: taxi_and_fhv  # Source name (logical grouping)
+    description: "Raw data from NYC Taxi"
+    database:         # Optional: defaults to target database
+    schema: homework_wk_4_airflow_and_dbt  # Schema where raw tables live
+    
+    tables:
+      - name: yellow_taxi_table
+        description: "the grain is one yellow taxi ride"
+        columns:
+          - name: VendorID
+            description: "Primary key"
+            tests:
+              - not_null
+              
+      - name: green_taxi_table
+        description: "the grain is one green taxi ride"
+        columns:
+          - name: VendorID
+            tests:
+              - not_null
+      
+      - name: fhv_uber_table
+        description: "the grain is fhv ride"
+        columns:
+          - name: dispatching_base_num
+            tests:
+              - not_null
