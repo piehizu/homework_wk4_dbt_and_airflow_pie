@@ -12,7 +12,7 @@ renamed as (
         vendorid as vendor_id,
         lpep_pickup_datetime as pickup_datetime_at,
         lpep_dropoff_datetime as dropoff_datetime_at,
-        store_and_fwd_flag as ,
+        store_and_fwd_flag as has_store_and_fwd_flag,
         ratecodeid as ratecode_id,
         pulocationid as pu_location_id,
         dolocationid as do_location_id,
