@@ -19,6 +19,8 @@ renamed as (
 
     from source
 
+    where dispatching_base_num IS NOT NULL
+
 )
 
 select * from renamed

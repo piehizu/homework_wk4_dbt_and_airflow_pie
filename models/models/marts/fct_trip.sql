@@ -23,7 +23,7 @@ then "green" end as service_type
 , int.dropoff_datetime_at
 , int.fare_amount
 , int.tip_amount
-, int.total_amount
+, int.total_amount as total_amount
 , int.passenger_count
 , int.trip_distance
 

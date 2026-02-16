@@ -1,4 +1,4 @@
-{{ config(location="us-east1") }}
+{{ config(location="us-east1", materialized='table') }}
 
 with fct_monthly_zone_revenue as (
 
